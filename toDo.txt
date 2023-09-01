@@ -1,0 +1,64 @@
+- Varios statements
+
+- Além das palavras-chave "init" e do operador "=", em um código-fonte mais completo, existem vários outros tipos de tokens que geralmente precisam ser categorizados. Aqui estão alguns exemplos comuns:
+
+- Palavras-Chave: Além de "init", muitas linguagens de programação têm palavras-chave reservadas que possuem significados específicos na sintaxe da linguagem. Exemplos incluem "if", "else", "while", "for", "return", etc.
+
+- Identificadores: São usados para nomear variáveis, funções, classes e outros elementos do código. Eles geralmente começam com uma letra ou sublinhado, seguidos por letras, dígitos ou sublinhados.
+
+- Números: Isso inclui números inteiros e de ponto flutuante. Além disso, alguns números podem estar em notação científica (por exemplo, 1.23e5).
+
+- Strings: Sequências de caracteres delimitadas por aspas simples ou duplas. Dentro das strings, os caracteres têm significado literal e não são interpretados como código.
+
+- Operadores: Além de "=", há uma variedade de operadores, como aritméticos (+, -, *, /), lógicos (&&, ||), de comparação (==, !=, >, <), entre outros.
+
+Delimitadores: Isso inclui símbolos como parênteses (), chaves {}, colchetes [], ponto e vírgula ; e vírgula , que são usados para estruturar o código.
+
+Comentários: Partes do código que não são executadas e servem apenas como anotações para humanos. Comentários podem ser em uma linha (// em muitas linguagens) ou em várias linhas (/* ... */).
+
+Whitespace: Espaços em branco, tabulações e quebras de linha que são usados para formatar o código e separar tokens.
+
+Símbolos Especiais: Outros símbolos especiais que podem ter significados específicos em uma linguagem de programação, como o ponto "." para acessar membros de uma classe.
+
+Literais: Além de strings, há outros tipos de literais, como literais booleanos (true, false) e literais nulos (null).
+
+Diretivas de Pré-processamento: Em linguagens como C/C++, diretivas de pré-processamento como #include e #define podem ser consideradas tokens separados.
+
+Tipos de Dados: Nomes de tipos de dados, como "int", "float", "string", etc.
+
+Operadores de Atribuição Especiais: Além de "=", podem haver outros operadores de atribuição como "+=", "-=", "*=", "/=", etc.
+
+Operadores Bit a Bit: Em linguagens de baixo nível, há operadores para manipulação de bits, como "&", "|", "^", "<<", ">>".
+
+Símbolos de Final de Instrução: Alguns idiomas não dependem apenas do ponto e vírgula, mas podem usar outros símbolos para indicar o final de uma instrução.
+
+Estes são apenas alguns exemplos. A lista exata de tokens a serem categorizados depende da linguagem de programação que você está analisando. Cada linguagem tem suas próprias regras e padrões para tokens.
+
+
+if self.token_atual.tipo == T_ID:
+            id_token = self.token_atual
+            self.use(T_ID)
+            self.use(T_OP, "=")
+            self.expr()
+            print(f" {id_token.valor}")
+        else:
+            self.erro()
+
+
+--------------
+var a
+var b
+var c
+var d
+var e
+var f
+
+
+
+a = 5
+b = 3
+c = "12"
+
+if ( a == 5 )
+
+result = a + b
