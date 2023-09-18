@@ -1,18 +1,8 @@
-# Bem vindo a essa nova linguagem de prog
+# Bem vindo a essa nova linguagem de prog ANT
 func main home(){
-    var a=1
+    var %a = 1
     var b=2
     var nome="Joao"
-    var value = [
-        {
-            "address" : "13th Street",
-            "city" : "New York"
-        },
-        {
-            "address" : "17th Street",
-            "city" : "New York"
-        },
-    ]
 
     var c = add(a,b)
     print("O resultado foi ", c)
@@ -33,7 +23,7 @@ func main home(){
     var mercedes = carro("mercedes", "GLE", 2022, 220)
     print("O carro polui: ", mercedes.poluicao)
 
-    end
+    end 
 }
 
 func add(a,b){

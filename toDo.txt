@@ -45,20 +45,8 @@ if self.token_atual.tipo == T_ID:
             self.erro()
 
 
---------------
-var a
-var b
-var c
-var d
-var e
-var f
 
+- gerar um erro lexico 
+- gerar um erro sintatico
+- erro lexico x erro sintatico
 
-
-a = 5
-b = 3
-c = "12"
-
-if ( a == 5 )
-
-result = a + b
