@@ -1,6 +1,7 @@
 # Bem vindo a essa nova linguagem de prog ANT
 func main home(){
-    var %a = 1
+    2
+    var a = 1
     var b=2
     var nome="Joao"
 
@@ -34,7 +35,8 @@ func ternary(a,b){
     return a === b ? true : false
 }
 
-object carro(marca, modelo, ano, velocidade){
+object carro(marca, modelo, ano, velocidade)
+{
     init carro(marca, modelo, ano, velocidade)
 
     func poluicao(velocidade){
