@@ -1,57 +1,3 @@
-- Varios statements
-
-- Além das palavras-chave "init" e do operador "=", em um código-fonte mais completo, existem vários outros tipos de tokens que geralmente precisam ser categorizados. Aqui estão alguns exemplos comuns:
-
-- Palavras-Chave: Além de "init", muitas linguagens de programação têm palavras-chave reservadas que possuem significados específicos na sintaxe da linguagem. Exemplos incluem "if", "else", "while", "for", "return", etc.
-
-- Identificadores: São usados para nomear variáveis, funções, classes e outros elementos do código. Eles geralmente começam com uma letra ou sublinhado, seguidos por letras, dígitos ou sublinhados.
-
-- Números: Isso inclui números inteiros e de ponto flutuante. Além disso, alguns números podem estar em notação científica (por exemplo, 1.23e5).
-
-- Strings: Sequências de caracteres delimitadas por aspas simples ou duplas. Dentro das strings, os caracteres têm significado literal e não são interpretados como código.
-
-- Operadores: Além de "=", há uma variedade de operadores, como aritméticos (+, -, *, /), lógicos (&&, ||), de comparação (==, !=, >, <), entre outros.
-
-Delimitadores: Isso inclui símbolos como parênteses (), chaves {}, colchetes [], ponto e vírgula ; e vírgula , que são usados para estruturar o código.
-
-Comentários: Partes do código que não são executadas e servem apenas como anotações para humanos. Comentários podem ser em uma linha (// em muitas linguagens) ou em várias linhas (/* ... */).
-
-Whitespace: Espaços em branco, tabulações e quebras de linha que são usados para formatar o código e separar tokens.
-
-Símbolos Especiais: Outros símbolos especiais que podem ter significados específicos em uma linguagem de programação, como o ponto "." para acessar membros de uma classe.
-
-Literais: Além de strings, há outros tipos de literais, como literais booleanos (true, false) e literais nulos (null).
-
-Diretivas de Pré-processamento: Em linguagens como C/C++, diretivas de pré-processamento como #include e #define podem ser consideradas tokens separados.
-
-Tipos de Dados: Nomes de tipos de dados, como "int", "float", "string", etc.
-
-Operadores de Atribuição Especiais: Além de "=", podem haver outros operadores de atribuição como "+=", "-=", "*=", "/=", etc.
-
-Operadores Bit a Bit: Em linguagens de baixo nível, há operadores para manipulação de bits, como "&", "|", "^", "<<", ">>".
-
-Símbolos de Final de Instrução: Alguns idiomas não dependem apenas do ponto e vírgula, mas podem usar outros símbolos para indicar o final de uma instrução.
-
-Estes são apenas alguns exemplos. A lista exata de tokens a serem categorizados depende da linguagem de programação que você está analisando. Cada linguagem tem suas próprias regras e padrões para tokens.
-
-
-if self.token_atual.tipo == T_ID:
-            id_token = self.token_atual
-            self.use(T_ID)
-            self.use(T_OP, "=")
-            self.expr()
-            print(f" {id_token.valor}")
-        else:
-            self.erro()
-
-
-
-- gerar um erro lexico 
-- gerar um erro sintatico
-- erro lexico x erro sintatico
-
-
-
 Vou explicar desde o começo. 
 Tenho um notebook python com varias funções em diferentes blocos. 
 O primeiro bloco é o onde definimos o token:
@@ -147,26 +93,7 @@ def tokenize():
     except StopExecution:
         print("Execução parada devido a erro.")
 
-O segundo bloco é o analisador lexico AFD:
-def analisador_lexico(filename):
-    try:
-        tokens_total = [];
-        with open(filename, 'r') as f:
-            lines = f.read().splitlines()
-
-        line_number = 0
-        for line in lines:
-            line_number += 1
-            tokens = tokenize_line(line, line_number)
-            tokens_total.extend(tokens)
-            #print(tokens)
-
-        return tokens_total
-
-    except StopExecution:
-        print("Execução parada devido a erro.")
-
- O terceiro bloco é o parser que voce mexeu:
+ O segundo bloco é o parser que voce mexeu:
 class Parser():
     def __init__(self, tokens):
         self.tokens = [Token(t.split(" ")[0], t.split(" ")[1] if len(t.split(" ")) > 1 else None) for t in tokens]
@@ -255,7 +182,7 @@ class Parser():
         self.use("T_KEYWORD", "func")
         function_name = self
 
-E o quarto bloco é a main que roda e chama todos os metodos:
+E o terceiro bloco é a main que roda e chama todos os metodos:
 def main():
     filename = 'codigo.x'
     print(f"Lendo o arquivo {filename}...")
