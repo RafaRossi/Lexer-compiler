@@ -1,4 +1,5 @@
 # ANT
-func main home(){
+func home(){
     var a = 1
+    var b = 2
 }
