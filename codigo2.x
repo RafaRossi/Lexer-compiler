@@ -14,11 +14,10 @@ func home(){
         print("error")
     }
 
-    add(a,b)
+    var soma = add(a,b)
 
 }
 
 func add(a,b){
     return a + b
 }
-
