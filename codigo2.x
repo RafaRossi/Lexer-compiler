@@ -14,9 +14,7 @@ func home(){
         print("error")
     }
 
-    var d = add(a,b)
-
-    var boolVar = ternary(a,b)
+    add(a,b)
 
 }
 
@@ -24,6 +22,3 @@ func add(a,b){
     return a + b
 }
 
-func ternary(a,b){
-    return a == b ? true : false
-}
