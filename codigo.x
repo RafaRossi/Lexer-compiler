@@ -1,10 +1,18 @@
 {
-    int result ; 
-    int a ;
-    int b ;
+    var result ; 
+    var a ;
+    var b ;
 
-    a = 2.93 ;
+    a = 3 ;
     b = 3 ;
 
     result = a + b ;
+    result = a - b ;
+    result = a * b ;
+    result = a / b ;
+
+    if (a == 2){
+        a = 2
+    }
+
 }
